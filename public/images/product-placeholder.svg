@@ -1,0 +1,23 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1200" fill="#F6F3FF"/>
+  <rect x="170" y="120" width="860" height="960" rx="48" fill="url(#paint0_linear)"/>
+  <g opacity="0.86">
+    <rect x="260" y="310" width="682" height="420" rx="28" fill="#E7E1FF"/>
+    <rect x="330" y="360" width="250" height="320" rx="30" fill="#C9C0FF"/>
+    <rect x="620" y="360" width="250" height="320" rx="30" fill="#BFAEFF"/>
+    <rect x="420" y="250" width="365" height="80" rx="24" fill="#9F8DFB"/>
+  </g>
+  <g opacity="0.9">
+    <path d="M400 738L497 635L585 731L700 594L826 760V924H400V738Z" fill="#5B3DF5"/>
+    <path d="M522 582L619 512L723 592L823 500V759H522V582Z" fill="#7A61FF"/>
+  </g>
+  <circle cx="915" cy="245" r="82" fill="#FFD166" fill-opacity="0.9"/>
+  <path d="M300 930H902" stroke="#8C7AF7" stroke-width="22" stroke-linecap="round"/>
+  <text x="600" y="1060" text-anchor="middle" fill="#312E81" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">SOARFLY</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="170" y1="120" x2="1030" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EDE7FF"/>
+      <stop offset="1" stop-color="#D4C9FF"/>
+    </linearGradient>
+  </defs>
+</svg>

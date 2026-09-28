@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, MessageCircle, Minus, Plus, Store, Star, Truck, ShieldCheck, Bookmark, CreditCard, Grid2X2, Ticket, X, Check, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "@tanstack/react-router";
+import { resolveAssetUrl } from "@/lib/assetUrl";
 import gallery1 from "@/assets/ferramentas/gallery-1.asset.json";
 import gallery2 from "@/assets/ferramentas/gallery-2.asset.json";
 import gallery3 from "@/assets/ferramentas/gallery-3.asset.json";
@@ -45,17 +46,17 @@ import description6 from "@/assets/ferramentas/description-6.asset.json";
 import description7 from "@/assets/ferramentas/description-7.asset.json";
 import description8 from "@/assets/ferramentas/description-8.asset.json";
 
-const gallery = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10].map(x => x.url);
-const creators = [creator1, creator2, creator3, creator4, creator5, creator6, creator7, creator8, creator9].map(x => x.url);
-const posters = [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8, poster9].map(x => x.url);
-const descriptions = [description1, description2, description3, description4, description5, description6, description7, description8].map(x => x.url);
+const gallery = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10].map(x => resolveAssetUrl(x));
+const creators = [creator1, creator2, creator3, creator4, creator5, creator6, creator7, creator8, creator9].map(x => resolveAssetUrl(x));
+const posters = [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8, poster9].map(x => resolveAssetUrl(x));
+const descriptions = [description1, description2, description3, description4, description5, description6, description7, description8].map(x => resolveAssetUrl(x));
 const creatorNames = ["matias_shop", "diego_shop", "falapiazao", "gilson_indica", "gilson_indica", "dilsopedreiro", "jeff_ferramentas", "gledsonsoares", "josieldicas"];
 const reviews = [
-  { name: "T***a", text: "Produto muito bom e de ótima qualidade. Chegou rápido e bem embalado, recomendo!", images: [review1.url] },
-  { name: "R***o", text: "Bom Produto, me surpreendi com qualidade. Motor brushless muito potente.", images: [review2.url] },
-  { name: "G**e M**a B**s", text: "Chegou, tudo funcionando so não testei ainda mais vou testar no serviço ai eu falo o desempenho", images: [review3.url, review4.url] },
-  { name: "V**r H**o", text: "Eu achava que nao ia recebe porque paguei muito barato mas recebi tudo certo . Recomendo", images: [review5.url] },
-  { name: "W**r S**a", text: "recebi tudo certo , ferramentas top , testei e sao brutas . comprei mais 4 pra revender na firma", images: [review6.url] },
+  { name: "T***a", text: "Produto muito bom e de ótima qualidade. Chegou rápido e bem embalado, recomendo!", images: [resolveAssetUrl(review1)] },
+  { name: "R***o", text: "Bom Produto, me surpreendi com qualidade. Motor brushless muito potente.", images: [resolveAssetUrl(review2)] },
+  { name: "G**e M**a B**s", text: "Chegou, tudo funcionando so não testei ainda mais vou testar no serviço ai eu falo o desempenho", images: [resolveAssetUrl(review3), resolveAssetUrl(review4)] },
+  { name: "V**r H**o", text: "Eu achava que nao ia recebe porque paguei muito barato mas recebi tudo certo . Recomendo", images: [resolveAssetUrl(review5)] },
+  { name: "W**r S**a", text: "recebi tudo certo , ferramentas top , testei e sao brutas . comprei mais 4 pra revender na firma", images: [resolveAssetUrl(review6)] },
 ];
 
 export default function ProductPage() {
