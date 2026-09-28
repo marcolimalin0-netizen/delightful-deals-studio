@@ -1,24 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
+import ProductPage from "@/components/ProductPage";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({ meta: [
+    { title: "Kit SOARFLY 4 em 1 | Ofertas TK Shop" },
+    { name: "description", content: "Conheça o kit de ferramentas SOARFLY 4 em 1 48Vf sem fio, com martelete, furadeira, esmerilhadeira e chave de impacto." },
+    { property: "og:title", content: "Kit SOARFLY 4 em 1 | Ofertas TK Shop" },
+    { property: "og:description", content: "Conheça o kit de ferramentas SOARFLY 4 em 1 48Vf sem fio, com martelete, furadeira, esmerilhadeira e chave de impacto." },
+    { property: "og:type", content: "product" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
+  component: ProductPage,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
