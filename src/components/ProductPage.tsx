@@ -46,17 +46,57 @@ import description6 from "@/assets/ferramentas/description-6.asset.json";
 import description7 from "@/assets/ferramentas/description-7.asset.json";
 import description8 from "@/assets/ferramentas/description-8.asset.json";
 
-const gallery = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10].map(x => resolveAssetUrl(x));
-const creators = [creator1, creator2, creator3, creator4, creator5, creator6, creator7, creator8, creator9].map(x => resolveAssetUrl(x));
-const posters = [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8, poster9].map(x => resolveAssetUrl(x));
-const descriptions = [description1, description2, description3, description4, description5, description6, description7, description8].map(x => resolveAssetUrl(x));
+const gallery = [
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698595803-59rx3b.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698624184-wek4tu.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698617478-a5t54x.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698630110-c07d0q.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698646887-k6htf1.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698603893-gu7ko5.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698595803-59rx3b.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698624184-wek4tu.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698617478-a5t54x.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698630110-c07d0q.webp",
+];
+const creators = [
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698632177-tkdl0r.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698647931-o49b1h.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698609637-wuxlon.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698610646-lduqeq.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698610646-lduqeq.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698641392-lvmju4.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698620780-mnhft8.jpg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698628590-82yvq7.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698611263-lj3kns.jpeg",
+];
+const posters = [
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698632177-tkdl0r.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698647931-o49b1h.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698609637-wuxlon.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698610646-lduqeq.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698610646-lduqeq.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698641392-lvmju4.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698620780-mnhft8.jpg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698628590-82yvq7.jpeg",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698611263-lj3kns.jpeg",
+];
+const descriptions = [
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698617478-a5t54x.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698630110-c07d0q.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698646887-k6htf1.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698603893-gu7ko5.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698601743-14w0x1.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698617478-a5t54x.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698630110-c07d0q.webp",
+  "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698646887-k6htf1.webp",
+];
 const creatorNames = ["matias_shop", "diego_shop", "falapiazao", "gilson_indica", "gilson_indica", "dilsopedreiro", "jeff_ferramentas", "gledsonsoares", "josieldicas"];
 const reviews = [
-  { name: "T***a", text: "Produto muito bom e de ótima qualidade. Chegou rápido e bem embalado, recomendo!", images: [resolveAssetUrl(review1)] },
-  { name: "R***o", text: "Bom Produto, me surpreendi com qualidade. Motor brushless muito potente.", images: [resolveAssetUrl(review2)] },
-  { name: "G**e M**a B**s", text: "Chegou, tudo funcionando so não testei ainda mais vou testar no serviço ai eu falo o desempenho", images: [resolveAssetUrl(review3), resolveAssetUrl(review4)] },
-  { name: "V**r H**o", text: "Eu achava que nao ia recebe porque paguei muito barato mas recebi tudo certo . Recomendo", images: [resolveAssetUrl(review5)] },
-  { name: "W**r S**a", text: "recebi tudo certo , ferramentas top , testei e sao brutas . comprei mais 4 pra revender na firma", images: [resolveAssetUrl(review6)] },
+  { name: "T***a", text: "Produto muito bom e de ótima qualidade. Chegou rápido e bem embalado, recomendo!", images: ["https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698598524-klx9yh.webp"] },
+  { name: "R***o", text: "Bom Produto, me surpreendi com qualidade. Motor brushless muito potente.", images: ["https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698606603-u226lm.webp"] },
+  { name: "G**e M**a B**s", text: "Chegou, tudo funcionando so não testei ainda mais vou testar no serviço ai eu falo o desempenho", images: ["https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698644396-hjwn6v.webp", "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698614462-xue96e.webp"] },
+  { name: "V**r H**o", text: "Eu achava que nao ia recebe porque paguei muito barato mas recebi tudo certo . Recomendo", images: ["https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698631657-tkjwae.webp"] },
+  { name: "W**r S**a", text: "recebi tudo certo , ferramentas top , testei e sao brutas . comprei mais 4 pra revender na firma", images: ["https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698621293-r2f5ry.webp"] },
 ];
 
 export default function ProductPage() {
