@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Heart, MessageCircle, Minus, Plus, ShoppingBag, Store, Star, Truck, ShieldCheck, Bookmark, CreditCard, Grid2X2, Ticket, X, Check, Zap } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle, Minus, Plus, Store, Star, Truck, ShieldCheck, Bookmark, CreditCard, Grid2X2, Ticket, X, Check, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import gallery1 from "@/assets/ferramentas/gallery-1.asset.json";
 import gallery2 from "@/assets/ferramentas/gallery-2.asset.json";
@@ -19,6 +19,16 @@ import creator5 from "@/assets/ferramentas/creator-5.asset.json";
 import creator6 from "@/assets/ferramentas/creator-6.asset.json";
 import creator7 from "@/assets/ferramentas/creator-7.asset.json";
 import creator8 from "@/assets/ferramentas/creator-8.asset.json";
+import creator9 from "@/assets/ferramentas/creator-9.asset.json";
+import poster1 from "@/assets/ferramentas/poster-1.asset.json";
+import poster2 from "@/assets/ferramentas/poster-2.asset.json";
+import poster3 from "@/assets/ferramentas/poster-3.asset.json";
+import poster4 from "@/assets/ferramentas/poster-4.asset.json";
+import poster5 from "@/assets/ferramentas/poster-5.asset.json";
+import poster6 from "@/assets/ferramentas/poster-6.asset.json";
+import poster7 from "@/assets/ferramentas/poster-7.asset.json";
+import poster8 from "@/assets/ferramentas/poster-8.asset.json";
+import poster9 from "@/assets/ferramentas/poster-9.asset.json";
 import review1 from "@/assets/ferramentas/review-1.asset.json";
 import review2 from "@/assets/ferramentas/review-2.asset.json";
 import review3 from "@/assets/ferramentas/review-3.asset.json";
@@ -35,9 +45,10 @@ import description7 from "@/assets/ferramentas/description-7.asset.json";
 import description8 from "@/assets/ferramentas/description-8.asset.json";
 
 const gallery = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10].map(x => x.url);
-const creators = [creator1, creator2, creator3, creator4, creator5, creator6, creator7, creator8].map(x => x.url);
+const creators = [creator1, creator2, creator3, creator4, creator5, creator6, creator7, creator8, creator9].map(x => x.url);
+const posters = [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8, poster9].map(x => x.url);
 const descriptions = [description1, description2, description3, description4, description5, description6, description7, description8].map(x => x.url);
-const creatorNames = ["matiastiktokshop", "diego_shop", "falapiazao", "gilson_indica", "dilsopedreiro", "jeff_ferramentas", "gledsonsoares", "josieldicas"];
+const creatorNames = ["matiastiktokshop", "diego_shop", "falapiazao", "gilson_indica", "gilson_indica", "dilsopedreiro", "jeff_ferramentas", "gledsonsoares", "josieldicas"];
 const reviews = [
   { name: "T***a", text: "Produto muito bom e de ótima qualidade. Chegou rápido e bem embalado, recomendo!", images: [review1.url] },
   { name: "R***o", text: "Bom Produto, me surpreendi com qualidade. Motor brushless muito potente.", images: [review2.url] },
@@ -92,7 +103,7 @@ export default function ProductPage() {
         <Button variant="ghost" className="info-row option" onClick={() => setSheet("buy")}><Grid2X2 size={18} /><img src={gallery[0]} alt="Kit 4 em 1" /><span>Selecionado: <strong>4 em 1</strong></span><ChevronRight size={18} /></Button>
         <Button variant="ghost" className="info-row protection" onClick={() => setSheet("protection")}><ShieldCheck size={19} /><span><strong>Proteção do cliente</strong><small><span>✓ Devolução gratuita</span><span>✓ Reembolso se algo der errado</span><span>✓ Pagamento seguro</span><span>✓ Se o seu pedido não for enviado no prazo</span></small></span><ChevronRight size={18} /></Button>
       </div>
-      <section className="creators-section"><h2>Vídeos de criadores (9)</h2><div className="creators-track">{creators.map((url, i) => <div className="creator-card" key={url}><img src={url} alt={`Vídeo de ${creatorNames[i]}`} loading="lazy" /><span>{creatorNames[i]}</span></div>)}</div></section>
+      <section className="creators-section"><h2>Vídeos de criadores (9)</h2><div className="creators-track">{posters.map((url, i) => <div className="creator-card" key={url}><img src={url} alt={`Vídeo de ${creatorNames[i]}`} loading="lazy" /><span><img src={creators[i]} alt="" />{creatorNames[i]}</span></div>)}</div></section>
     </section>
     <section ref={ratings} className="ratings-section"><div className="section-heading"><Star size={18} fill="currentColor" /><b>4.8</b><span className="heading-divider" /><h2>Avaliações dos clientes (236)</h2><Button variant="ghost" onClick={() => navigateTo("Avaliações")}>Ver mais <ChevronRight size={15} /></Button></div>
       {reviews.map(review => <article className="review" key={review.name}><div className="review-avatar">{review.name[0]}</div><div className="review-body"><strong>{review.name}</strong><div className="review-stars">★★★★★ <span>· 4 em 1</span></div><p>{review.text}</p><div className="review-images">{review.images.map(url => <img key={url} src={url} alt={`Foto da avaliação de ${review.name}`} loading="lazy" />)}</div></div></article>)}
