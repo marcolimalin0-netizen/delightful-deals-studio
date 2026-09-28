@@ -3,8 +3,9 @@ import { Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { ChevronLeft, ChevronRight, MapPin, Minus, Plus, QrCode, Copy, Clock, Zap, Ticket, Smile } from "lucide-react";
 import { toast } from "sonner";
-import gallery1 from "@/assets/ferramentas/gallery-1.asset.json";
 import { createPix, checkPix } from "@/lib/pix.functions";
+
+const FEATURED_PRODUCT_IMAGE = "https://promocoes-tkshop.lovable.app/api/public/media/uploads/1787698595803-59rx3b.webp";
 
 type Address = {
   name: string; phone: string; email: string; cep: string; uf: string; city: string;
@@ -66,7 +67,7 @@ export default function Checkout({ initialQty }: { initialQty: number }) {
       <section className="co-card">
         <div className="co-store"><strong>SOARFLY Tools BR</strong></div>
         <div className="co-item">
-          <img src={gallery1.url} alt="Kit SOARFLY 4 em 1" />
+          <img src={FEATURED_PRODUCT_IMAGE} alt="Kit SOARFLY 4 em 1" />
           <div>
             <p className="co-title">[SOARFLY] Kit Ferramentas 4 em 1 48Vf | Íon Lítio Baterias Sem Fio</p>
             <span className="co-flash"><Zap size={11} fill="currentColor" /> Oferta Relâmpago <b>{coupon.label}</b></span>
